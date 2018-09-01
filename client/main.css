@@ -1,0 +1,126 @@
+#welcome{
+	display: none;
+}
+#config{
+	display: none;
+}
+#home{
+	display: none;
+}
+#verde{
+	color: #176c4d;
+}
+body {
+	margin: 0px;
+	font-family: sans-serif;
+	color: #fff;
+	background-color: #176c4d;
+	min-height: 100vh;
+}
+header{
+	padding-top: 3%;
+	height: 10vh;
+	background-color: #217b5a;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0px;
+	margin-top: 3%;
+}
+main{
+	max-height: 80vh;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+.w20{
+	width: 20%;
+}
+.w70{
+	width: 70%;
+}
+.ml15{
+	margin-left: 15%;
+}
+.botao{
+	height: 15vh;
+	border: none;
+	background-color: #fff;
+	position: fixed;
+	top:75vh;
+	left: 0%;
+}
+.float-left{
+	float: left;
+}
+.text-center{
+	text-align: center;
+}
+.texto{
+	margin-left: 8.33%;
+	min-height: 45vh;
+	max-height: 45vh;
+}
+.mt2{
+	margin-top:2%
+}
+.AardvarkBold{
+	font-family:Aardvark Bold;
+}
+.Bombardier{
+	font-family: Bombardier;
+}
+.Square721BT{
+	font-family: Square721 BT;
+}
+.BerlinSansFBDemi{
+	font-family: Berlin Sans FB Demi;
+}
+
+
+
+
+
+
+.c1{
+	width: 8.33%;
+}
+.c2{
+	width: 16.66%;
+}
+.c3{
+	width: 25%;
+}
+.c4{
+	width: 33.33%;
+}
+.c5{
+	width: 41.66%;
+}
+.c6{
+	width: 50%;
+}
+.c7{
+	width: 58.33%;
+}
+.c8{
+	width: 66.66%;
+}
+.c9{
+	width: 75%;
+}
+.c10{
+	width: 83.33%;
+}
+.c11{
+	width: 91.66%;
+}
+.c12{
+	width: 100%;
+}
+
+@media only screen and (max-width: 767px){
+	span{
+		font-size: 25px;
+	}
+}
