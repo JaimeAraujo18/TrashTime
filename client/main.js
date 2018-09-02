@@ -4,4 +4,4 @@ import '../imports/ui/welcome.js';
 import '../imports/ui/config.js';
 import '../imports/ui/home.js';
 import '../imports/ui/body.js';
-import '../imports/js/js.html';
+import '../imports/js/js.js';
