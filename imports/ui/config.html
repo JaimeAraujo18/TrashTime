@@ -1,10 +1,16 @@
 <template name="config">
 	
-	<div id="config">
-		{{#each coletas}}
-			<p>{{bairro}}</p>
-		{{/each}}
-		<button class="c12 botao Square721BT" onclick="next(1)">
+	<div class="c10 centro" id="config">
+		<h2 class="text-center"> Configuração</h2>
+		<h3>Selecione seu bairro: </h3>
+		<select class="c5" id="bairro">
+			<option class="float-left" value="null">SELECIONE</option>
+			{{#each coletas}}
+				<option class="float-left" value="{{bairro}}">{{bairro}}</option>
+			{{/each}}
+		</select>
+		<span id="erro"> Esse campo é obrigatório!</span>
+		<button class="c12 botao Square721BT" onclick="config()">
 			<span><strong id="verde">Continuar</strong></span>
 		</button>
 	</div>

@@ -8,4 +8,3 @@ Template.config.helpers({
 		return ColetasBanco.find({});
 	},
 });
-console.log(Template.config.helpers.coletas);

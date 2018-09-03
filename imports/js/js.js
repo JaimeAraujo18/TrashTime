@@ -1,16 +1,15 @@
 $(function(){
-	$("#welcome").css("display","block");
+	$("#welcome").show();
 	function next(pn) {
 		switch(pn){
 			case 0: 
-				$("#welcome").css("display", "none");
-				$("#config").css("display", "block");
+				$("#welcome").hide();
+				$("#config").show();
 				break;
 			case 1: 
-				$("#config").css("display","none");
-				$("#home").css("display", "block");
+				$("#config").hide();
+				$("#home").show();
 				break;
-		}
-	}
-});
-	
+		};
+	};
+};

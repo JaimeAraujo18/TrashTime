@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import '../imports/api/coletas.js';
 
-Meteor.startup(() => {
+/*Meteor.startup(() => {
   // code to run on server at startup
-});
+});*/

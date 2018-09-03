@@ -1,0 +1,32 @@
+<template name="js">
+	
+	<script type="text/javascript">
+		$("#welcome").show();
+		function next(pn) {
+			switch(pn){
+				case 0: 
+					$("#welcome").hide();
+					$("#config").show();
+					break;
+				case 1: 
+					$("#config").hide();
+					$("#home").show();
+					break;
+			};
+		};
+		function config() {
+			select = document.getElementById('bairro');
+			console.log(select);
+			index = select.selectedIndex;
+			valor = select.options[index];
+
+			if (valor == "null") {
+				$("#erro").show();
+			} else {
+				next(1);
+				return valor;
+			}
+		}
+	</script>
+
+</template>
