@@ -1,0 +1,29 @@
+<template name="funcs">
+	<script type="text/javascript">
+		function next(pn) {
+			switch(pn){
+				case 0: 
+					$("#welcome").addClass("hidden");
+					$("#config").removeClass("hidden");
+					break;
+				case 1: 
+					$("#config").addClass("hidden");
+					$("#home").removeClass("hidden");
+					break;
+			};
+		};
+		function config() {
+			select = document.getElementById('bairro');
+			index = select.selectedIndex;
+			valor = select.options[index].value;
+			if (valor == "null") {
+				$("#erroa").removeClass("hidden");
+				$("#areae").removeClass("hidden");
+			} else {
+				$("#areae").addClass("hidden");
+				next(1);
+				return valor;
+			}
+		};
+	</script>
+</template>

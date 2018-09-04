@@ -1,18 +1,25 @@
 <template name="config">
 	
-	<div class="c10 centro" id="config">
+	<div class="c10 centro hidden" id="config">
 		<h2 class="text-center"> Configuração</h2>
 		<h3>Selecione seu bairro: </h3>
-		<select class="c5" id="bairro">
-			<option class="float-left" value="null">SELECIONE</option>
-			{{#each coletas}}
-				<option class="float-left" value="{{bairro}}">{{bairro}}</option>
-			{{/each}}
-		</select>
-		<span id="erro"> Esse campo é obrigatório!</span>
+		<div>
+			<select class="c5 float-left" id="bairro">
+				<option class="float-left" value="null">SELECIONE</option>
+				{{#each coletas}}
+					<option class="float-left" value="{{bairro}}">{{bairro}}</option>
+				{{/each}}
+			</select>
+			<p id="erroa" class="float-left">*</p>
+		</div>
 		<button class="c12 botao Square721BT" onclick="config()">
 			<span><strong id="verde">Continuar</strong></span>
 		</button>
+		<span id="erro"> Esse campo é obrigatório!</span>
 	</div>
+		
+		<div id="areae" class="centro c10">
+			<p class="m0" id="errop">* Campos obrigatórios!</p>
+		</div>
 
 </template>
