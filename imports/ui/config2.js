@@ -3,6 +3,6 @@ import './config2.html';
 
 Template.config2.helpers({
 	bairro(){
-		return ColetasBanco.findOne({bairro: ""})
-	}
+		return ColetasBanco.findOne({bairro: valor});
+	},
 });

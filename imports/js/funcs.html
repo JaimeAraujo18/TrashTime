@@ -13,10 +13,13 @@
 			};
 		};
 		function config() {
-			select = document.getElementById('bairro');
-			index = select.selectedIndex;
-			valor = select.options[index].value;
-			if (valor == "null") {
+			selectc = $("#cidade");
+			selectb = $("#bairro");
+			indexc = selectc.selectedIndex;
+			indexb = selectb.selectedIndex;
+			valorc = selectc.options[index].value;
+			valorb = selectb.options[index].value;
+			if (valorb == "null" || valorc == "null") {
 				$("#erroa").removeClass("hidden");
 				$("#areae").removeClass("hidden");
 			} else {

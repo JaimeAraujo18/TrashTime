@@ -1,6 +1,5 @@
 $(function(){
 	$("#welcome").removeClass("hidden");
-	$("#welcome").addClass("shown");
-	$("#erroa").addClass("hidden");
+	$(".erroa").addClass("hidden");
 	$("#areae").addClass("hidden");
 });

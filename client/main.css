@@ -33,11 +33,7 @@ a{
 	background-color: #f64949b3;
 	font-size: 8px;
 	float: right;
-}
-#erroa{
-	margin: 0px 0px 0px 3%;
-	color: #ff2900;
-}
+}	
 #areae{
 	border: solid;
 	border-color: #ff2900;
@@ -51,6 +47,10 @@ a{
 	line-height: 6vh;
 	width: 95%;
 	padding-left: 5%;
+}
+.erroa{
+	margin: 0px 0px 0px 3%;
+	color: #ff2900;
 }
 .hidden{
 	display: none;

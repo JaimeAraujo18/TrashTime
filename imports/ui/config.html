@@ -2,15 +2,26 @@
 	
 	<div class="c10 centro hidden" id="config">
 		<h2 class="text-center"> Configuração</h2>
-		<h3>Selecione seu bairro: </h3>
+		<h3>Selecione sua cidade: </h3>
 		<div>
+			<select class="c5 float-left" id="cidade">
+				<option class="float-left" value="null">SELECIONE</option>
+				{{#each coletasCidade}}
+					<option class="float-left" value="{{cidade}}">{{cidade}}</option>
+				{{/each}}
+			</select>
+			<p class="erroa float-left">*</p>
+		</div>
+		
+		<div>
+			<h3>Selecione seu bairro: </h3>
 			<select class="c5 float-left" id="bairro">
 				<option class="float-left" value="null">SELECIONE</option>
 				{{#each coletas}}
 					<option class="float-left" value="{{bairro}}">{{bairro}}</option>
 				{{/each}}
 			</select>
-			<p id="erroa" class="float-left">*</p>
+			<p class="erroa float-left">*</p>
 		</div>
 		<button class="c12 botao Square721BT" onclick="config()">
 			<span><strong id="verde">Continuar</strong></span>
