@@ -1,0 +1,55 @@
+body {
+	margin: 0px;
+	font-family: sans-serif;
+	color: #fff;
+	background-color: #176c4d;
+	min-height: 100vh;
+}
+header{
+	padding-top: 3%;
+	height: 10vh;
+	background-color: #217b5a;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0px;
+	margin-top: 3%;
+}
+main{
+	max-height: 80vh;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	color: #F0F0F0;
+}
+.verde{color: #176c4d;}
+.hidden{
+	display: none;
+}
+.botao{
+	height: 15vh;
+	border: none;
+	background-color: #fff;
+	position: fixed;
+	top:75vh;
+	left: 0%;
+}
+.mt2{
+	margin-top:2%
+}
+
+
+
+@media only screen and (max-width: 767px){
+	span{
+		font-size: 25px;
+	}
+}
+/*
+
+position: fixed;
+top: 91vh;
+left: 0%;
+
+*/
