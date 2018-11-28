@@ -1,7 +1,7 @@
 $(function(){
 	$.ajax({ 
 		method: "GET",
-		url: 'http://localhost:8080/export'
+		url: 'http://http://trashtimewebservice-com.umbler.net/export',
 	})
 	.done(function(result) {
 		console.log("success");
@@ -12,7 +12,25 @@ $(function(){
 		console.log("error");
 	})
 	
+	$("#cidade").change(function(e) {
+		if ($("#cidade").val()=="SELECIONE") {
+			$("#cidadeErro").removeClass('hidden');
+		}else{
+			if (!$("#cidadeErro").hasClass('hidden')) {
+				$("#cidadeErro").addClass('hidden');
+			}
+			$("#bairro").removeClass('hidden');
+		}
+	});
+	$("#bairro").change(function(e) {
+		if ($("#bairro").val()=="SELECIONE") {
+			$("#bairroErro").removeClass('hidden');
+		}else{
+			if ($("#bairroErro").hasClass('hidden')) {
+				$("#bairroErro").addClass('hidden');
+			}
+			$("#configBtn").removeClass('hidden');
+		}
+	});
 	$("#welcome").removeClass("hidden");
-	$(".erroa").addClass("hidden");
-	$("#areae").addClass("hidden");
 });

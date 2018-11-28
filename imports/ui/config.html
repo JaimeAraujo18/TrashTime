@@ -1,36 +1,35 @@
 <template name="config">
-	
-	<div class="c10 centro hidden" id="config">
-		<h2 class="text-center"> Configuração</h2>
-		<h3>Selecione sua cidade: </h3>
-		<div class="row">
-			<select class="c5 float-left" id="cidade">
-				<option class="float-left" value="null">SELECIONE</option>
-				{{#each coletasCidade}}
-					<option class="float-left" value="{{cidade}}">{{cidade}}</option>
-				{{/each}}
-			</select>
-			<p class="erroa float-left">*</p>
+	<div id="config" class="hidden">
+		<h2 class="text-center c12"> Configuração</h2><br>
+		<div class="c10 m1">
+			<label for="cidade"><h4>Selecione sua cidade: </h4></label>
+			<div class="row">
+				<select class="c11 float-left form-controll" id="cidade">
+					<option class="select" value="null">SELECIONE</option>
+					{{#each coletasCidade}}
+						<option value="{{cidade}}">{{cidade}}</option>
+					{{/each}}
+				</select>
+				<p id="cidadeErro" class="c1 hidden alert alert-danger float-right">*</p><br>
+			</div>
+			<div class="hidden">
+				<label for="bairro"><h4>Selecione seu bairro: </h4></label>
+				<div class="row">
+					<select class="c11 float-left form-controll" id="bairro">
+						<option class="float-left" value="null">SELECIONE</option>
+						{{#each coletas}}
+							<option value="{{bairro}}">{{bairro}}</option>
+						{{/each}}
+					</select>
+					<p id="bairroErro" class="c1 hidden alert alert-danger float-right">*</p>
+				</div>
+			</div>
 		</div>
 		
-		<div class="row">
-			<h3>Selecione seu bairro: </h3>
-			<select class="c5 float-left" id="bairro">
-				<option class="float-left" value="null">SELECIONE</option>
-				{{#each coletas}}
-					<option class="float-left" value="{{bairro}}">{{bairro}}</option>
-				{{/each}}
-			</select>
-			<p class="erroa float-left">*</p>
-		</div>
-		<button class="c12 botao Square721BT" onclick="config()">
-			<span><strong id="verde">Continuar</strong></span>
+		
+		
+		<button id="configBtn" class="col-sm-12 botao hidden" onclick="config()">
+			<span><strong class="verde">Continuar</strong></span>
 		</button>
-		<span id="erro"> Esse campo é obrigatório!</span>
 	</div>
-		
-		<div id="areae" class="centro c10">
-			<p class="m0" id="errop">* Campos obrigatórios!</p>
-		</div>
-
 </template>

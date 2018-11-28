@@ -12,21 +12,5 @@
 					break;
 			};
 		};
-		function config() {
-			selectc = $("#cidade");
-			selectb = $("#bairro");
-			indexc = selectc.selectedIndex;
-			indexb = selectb.selectedIndex;
-			valorc = selectc.options[index].value;
-			valorb = selectb.options[index].value;
-			if (valorb == "null" || valorc == "null") {
-				$("#erroa").removeClass("hidden");
-				$("#areae").removeClass("hidden");
-			} else {
-				$("#areae").addClass("hidden");
-				next(1);
-				return valor;
-			}
-		};
 	</script>
 </template>
