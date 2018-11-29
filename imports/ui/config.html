@@ -6,20 +6,17 @@
 			<div class="row">
 				<select class="c11 float-left form-controll" id="cidade">
 					<option class="select" value="null">SELECIONE</option>
-					{{#each coletasCidade}}
-						<option value="{{cidade}}">{{cidade}}</option>
+					{{#each cidades}}
+						<option value="{{id}}">{{nome}}</option>
 					{{/each}}
 				</select>
 				<p id="cidadeErro" class="c1 hidden alert alert-danger float-right">*</p><br>
 			</div>
-			<div class="hidden">
+			<div id="divBairro" class="hidden">
 				<label for="bairro"><h4>Selecione seu bairro: </h4></label>
 				<div class="row">
 					<select class="c11 float-left form-controll" id="bairro">
-						<option class="float-left" value="null">SELECIONE</option>
-						{{#each coletas}}
-							<option value="{{bairro}}">{{bairro}}</option>
-						{{/each}}
+						<option id="nullOption" value="null">SELECIONE</option>
 					</select>
 					<p id="bairroErro" class="c1 hidden alert alert-danger float-right">*</p>
 				</div>
@@ -28,7 +25,7 @@
 		
 		
 		
-		<button id="configBtn" class="col-sm-12 botao hidden" onclick="config()">
+		<button id="configBtn" class="c12 botao hidden" onclick="config()">
 			<span><strong class="verde">Continuar</strong></span>
 		</button>
 	</div>

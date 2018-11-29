@@ -1,13 +1,17 @@
 import { template } from 'meteor/templating';
+import { Session } from 'meteor/session';
+import { Cidades } from '../api/cidades.js';
+import { Bairros } from '../api/bairros.js';
 import './config.html';
 
-import { ColetasBanco } from '../api/coletas.js';
-
 Template.config.helpers({
-	/*coletasCidade() {
-		return ColetasBanco.distinct("cidade");
-	},*/
-	coletas() {
-		return ColetasBanco.find({});
+	cidades() {
+		return Cidades.find({});
 	},
+	bairros() {
+		return Bairros.find({});
+	}
+});
+Template.registerHelper('ifequals', function(a,b) {
+    return a === b;
 });
