@@ -1,3 +1,73 @@
 <template name="config2">
-	
+	<div id="config2" class="hidden">
+		<h2 class="text-center c12"> Configuração</h2><br>
+		<div class="c10 m1">
+			{{#each bairros}}
+				{{#with b}}
+					{{#ifequals bairro.id ./b}}
+						<h3 class="c12">Lixo seco:</h3>
+						<p>A coleta é realizada duas vezes na semana, quais dos dias gostaria de ser alertado?: </p>
+						<p id="diaSecoErro" class="c12 hidden alert alert-danger float-right">Ao menos um campo deve ser marcado.</p>
+						<div class="row">
+							<label class="container">
+								{{#ifequal dia_seco1 1}}Domingo{{/ifequal}}
+								{{#ifequal dia_seco1 2}}Segunda-Feira{{/ifequal}}
+								{{#ifequal dia_seco1 3}}Terça-Feira{{/ifequal}}
+								{{#ifequal dia_seco1 4}}Quarta-Feira{{/ifequal}}
+								{{#ifequal dia_seco1 5}}Quinta-Feira{{/ifequal}}
+								{{#ifequal dia_seco1 6}}Sexta-Feira{{/ifequal}}
+								{{#ifequal dia_seco1 7}}Sábado{{/ifequal}}
+								<input id="checkSeco1" type="checkbox" value="{{dia_seco1}}">
+								<span class="checkmark"></span>
+							</label>
+
+							<label class="container">
+								{{#ifequal dia_seco2 1}}Domingo{{/ifequal}}
+								{{#ifequal dia_seco2 2}}Segunda-Feira{{/ifequal}}
+								{{#ifequal dia_seco2 3}}Terça-Feira{{/ifequal}}
+								{{#ifequal dia_seco2 4}}Quarta-Feira{{/ifequal}}
+								{{#ifequal dia_seco2 5}}Quinta-Feira{{/ifequal}}
+								{{#ifequal dia_seco2 6}}Sexta-Feira{{/ifequal}}
+								{{#ifequal dia_seco2 7}}Sábado{{/ifequal}}
+							 	<input id="checkSeco2" type="checkbox" value="{{dia_seco2}}">
+							    <span class="checkmark"></span>
+							</label>
+						</div>
+
+						<h3 class="c12">Lixo orgânico:</h3>
+						<p>A coleta é realizada duas vezes na semana, quais dos dias gostaria de ser alertado?: </p>
+						<p id="diaOrgErro" class="c12 hidden alert alert-danger float-right">Ao menos um campo deve ser marcado.</p>
+						<div class="row">
+							<label class="container">
+								{{#ifequal dia_org1 1}}Domingo{{/ifequal}}
+								{{#ifequal dia_org1 2}}Segunda-Feira{{/ifequal}}
+								{{#ifequal dia_org1 3}}Terça-Feira{{/ifequal}}
+								{{#ifequal dia_org1 4}}Quarta-Feira{{/ifequal}}
+								{{#ifequal dia_org1 5}}Quinta-Feira{{/ifequal}}
+								{{#ifequal dia_org1 6}}Sexta-Feira{{/ifequal}}
+								{{#ifequal dia_org1 7}}Sábado{{/ifequal}}
+								<input id="checkOrg1" type="checkbox" value="{{dia_seco1}}">
+								<span class="checkmark"></span>
+							</label>
+
+							<label class="container">
+								{{#ifequal dia_org2 1}}Domingo{{/ifequal}}
+								{{#ifequal dia_org2 2}}Segunda-Feira{{/ifequal}}
+								{{#ifequal dia_org2 3}}Terça-Feira{{/ifequal}}
+								{{#ifequal dia_org2 4}}Quarta-Feira{{/ifequal}}
+								{{#ifequal dia_org2 5}}Quinta-Feira{{/ifequal}}
+								{{#ifequal dia_org2 6}}Sexta-Feira{{/ifequal}}
+								{{#ifequal dia_org2 7}}Sábado{{/ifequal}}
+							 	<input id="checkOrg2" type="checkbox" value="{{dia_seco2}}">
+							 	<span class="checkmark"></span>
+							</label>
+						</div>
+						<button id="config2Btn" class="c12 botao" onclick="check({{dia_seco1}}, {{dia_seco2}}, {{dia_org1}}, {{dia_org2}}">
+							<span><strong class="verde">Continuar</strong></span>
+						</button>
+					{{/ifequals}}
+				{{/with}}
+			{{/each}}
+		</div>
+	</div>
 </template>
