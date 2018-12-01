@@ -1,10 +1,10 @@
 <template name="config">
-	<div id="config" class="hidden">
+	<div id="config" class="hidden conteiner">
 		<h2 class="text-center c12"> Configuração</h2><br>
 		<div class="c10 m1">
 			<label for="cidade"><h4>Selecione sua cidade: </h4></label>
 			<div class="row">
-				<select class="c11 float-left form-controll" id="cidade">
+				<select class="c10 float-left form-controll" id="cidade">
 					<option class="select" value="null">SELECIONE</option>
 					{{#each cidades}}
 						<option value="{{id}}">{{nome}}</option>
@@ -15,7 +15,7 @@
 			<div id="divBairro" class="hidden">
 				<label for="bairro"><h4>Selecione seu bairro: </h4></label>
 				<div class="row">
-					<select class="c11 float-left form-controll" id="bairro">
+					<select class="c10 float-left form-controll" id="bairro">
 						<option id="nullOption" value="null">SELECIONE</option>
 					</select>
 					<p id="bairroErro" class="c1 hidden alert alert-danger float-right">*</p>

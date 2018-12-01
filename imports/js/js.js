@@ -5,6 +5,24 @@ $(function(){
 	import { Session } from 'meteor/session';
 	import { Meteor } from 'meteor/meteor';
 
+	Push.Configure({
+	  android: {
+	    senderID: 776272285457,
+	    alert: true,
+	    badge: true,
+	    sound: true,
+	    vibrate: true,
+	    clearNotifications: true
+	    // icon: '',
+	    // iconColor: ''
+	  },
+	  ios: {
+	    alert: true,
+	    badge: true,
+	    sound: true
+	  }
+	});
+
 	Meteor.call('removeAvisos');
 	Meteor.call('removeBairros');
 	Meteor.call('removeCidades');
@@ -184,5 +202,4 @@ $(function(){
 	});
 	getJSON();
 	//Meteor.setInterval(getJSON,30000); // 5184000000 == 24 horas em ms
-	$("#welcome").removeClass("hidden");
 });
