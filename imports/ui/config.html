@@ -11,7 +11,7 @@
 					{{/each}}
 				</select>
 				<p id="cidadeErro" class="c1 hidden alert alert-danger float-right">*</p><br>
-			</div>
+			</div><br>
 			<div id="divBairro" class="hidden">
 				<label for="bairro"><h4>Selecione seu bairro: </h4></label>
 				<div class="row">
@@ -25,7 +25,7 @@
 		
 		
 		
-		<button id="configBtn" class="c12 botao hidden" onclick="salvar($('#cidade').val(),$('#bairro').val())">
+		<button id="configBtn" class="c12 botao hidden" onclick="next(1)">
 			<span><strong class="verde">Continuar</strong></span>
 		</button>
 	</div>

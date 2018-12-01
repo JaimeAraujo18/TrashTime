@@ -3,4 +3,4 @@ import { Session } from 'meteor/session';
 import { Avisos } from '../api/avisos.js';
 import { Bairros } from '../api/bairros.js';
 import { Cidades } from '../api/cidades.js';
-import './config2.html';
+import './config3.html';

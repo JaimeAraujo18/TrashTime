@@ -5,29 +5,27 @@
 				case 0: 
 					$("#welcome").addClass("hidden");
 					$("#config").removeClass("hidden");
-					break;
+				break;
 				case 1: 
 					$("#config").addClass("hidden");
 					$("#config2").removeClass("hidden");
-					break;
+				break;
 				case 2:
 					$("#congif2").addClass('hidden');
+					$("#config3").removeClass('hidden');
+				break;
+				case 3:
+					$("#congif3").addClass('hidden');
 					$("#home").removeClass('hidden');
-					break;
+				break;
 			};
 		};
-		function salvar(cidadeID, bairroID) {
-			Session.set("cidadeID", cidadeID);
-			Session.set("bairroID", bairroID);
-			next(1);
-		};
-		function check(diaSeco1, diaSeco2, diaOrg1, diaOrg2) {
+		function checkSeco(diaSeco1,diaSeco2) {
 			var erro=0;
 			var nchecks=0;
 			var dia_seco1;
 			var dia_seco2;
-			var dia_org1;
-			var dia_org2;
+
 			if (document.getElementById("checkSeco1").checked) {
 				dia_seco1=true;
 				nchecks++;
@@ -41,16 +39,26 @@
 				erro++;
 			}else if (nchecks==1) {
 				if (dia_seco1) {
-					Session.set("diaSecoAlertado", diaSeco1);
+					//Session.set("diaSecoAlertado", diaSeco1);
 					nchecks==0;
 				}else if (dia_seco2) {
-					Session.set("diaSecoAlertado", diaSeco2);
+					//Session.set("diaSecoAlertado", diaSeco2);
 					nchecks=0;
 				}
 			}else if (nchecks==2) {
-				Session.set("diaSecoAlertado", array(diaSeco1, diaSeco2));
+				//Session.set("diaSecoAlertado", array(diaSeco1, diaSeco2));
 				nchecks=0;
 			}
+
+			if (erro==0) {
+				next(2);
+			}
+		};
+		function checkOrg(diaOrg1, diaOrg2) {
+			var erro=0;
+			var nchecks=0;
+			var dia_org1;
+			var dia_org2;
 
 			if (document.getElementById("checkOrg1").checked) {
 				dia_org1=true;
@@ -60,24 +68,26 @@
 				dia_org2=true;
 				nchecks++;
 			}
+
 			if (nchecks==0) {
 				$("#diaOrgErro").removeClass('hidden');
 				erro++;
 			}else if (nchecks==1) {
 				if (dia_org1) {
-					Session.set("diaOrgAlertado", diaOrg1);
+					//Session.set("diaOrgAlertado", diaOrg1);
 					nchecks==0;
 				}else if (dia_org2) {
-					Session.set("diaOrgAlertado", diaOrg2);
+					//Session.set("diaOrgAlertado", diaOrg2);
 					nchecks=0;
 				}
 			}else if (nchecks==2) {
-				Session.set("diaOrgAlertado", array(diaOrg1, diaOrg2));
+				//Session.set("diaOrgAlertado", array(diaOrg1, diaOrg2));
 				nchecks=0;
 			}
+
 			if (erro==0) {
-				next(2);
+				next(3);
 			}
-		}
+		};
 	</script>
 </template>

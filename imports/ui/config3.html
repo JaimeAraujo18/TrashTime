@@ -1,0 +1,35 @@
+<template name="config2">
+	<div id="config3" class="hidden">
+		<h2 class="text-center c12"> Configuração</h2><br>
+		<div class="c10 m1">
+			<h4 class="c12">Lixo orgânico:</h4>
+			<big>Quando ser alertado: </big>
+			<p id="diaOrgErro" class="c12 hidden alert alert-danger">Ao menos um campo deve ser marcado.</p>
+			<div id="divOrg" class="row">
+				<label class="container">
+					<input id="checkOrg1" type="checkbox">
+					<big id="domingoOrg1" class="hidden">Domingo</big>
+					<big id="segundaOrg1" class="hidden">Segunda-Feira</big>
+					<big id="tercaOrg1" class="hidden">Terça-Feira</big>
+					<big id="quartaOrg1" class="hidden">Quarta-Feira</big>
+					<big id="quintaOrg1" class="hidden">Quinta-Feira</big>
+					<big id="sextaOrg1" class="hidden">Sexta-Feira</big>
+					<big id="sabadoOrg1" class="hidden">Sábado</big>
+				</label>
+				<label class="container">
+				 	<input id="checkOrg2" type="checkbox">
+				 	<big id="domingoOrg2" class="hidden">Domingo</big>
+					<big id="segundaOrg2" class="hidden">Segunda-Feira</big>
+					<big id="tercaOrg2" class="hidden">Terça-Feira</big>
+					<big id="quartaOrg2" class="hidden">Quarta-Feira</big>
+					<big id="quintaOrg2" class="hidden">Quinta-Feira</big>
+					<big id="sextaOrg2" class="hidden">Sexta-Feira</big>
+					<big id="sabadoOrg2" class="hidden">Sábado</big>
+				</label>
+			</div>
+			<button id="config2Btn" class="c12 botao" onclick="checkOrg($('#checkOrg1').val(),$('#checkOrg2').val()">
+				<span><strong class="verde">Continuar</strong></span>
+			</button>
+		</div>
+	</div>
+</template>

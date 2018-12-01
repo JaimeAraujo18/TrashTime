@@ -12,6 +12,3 @@ Template.config.helpers({
 		return Bairros.find({});
 	}
 });
-Template.registerHelper('ifequals', function(a,b) {
-    return a === b;
-});
