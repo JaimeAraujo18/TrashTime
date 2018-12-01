@@ -1,6 +1,6 @@
 <template name="funcs">
 	<script type="text/javascript">
-		function next(pn) {
+		function proximo(pn) {
 			switch(pn){
 				case 0: 
 					$("#welcome").addClass("hidden");
@@ -11,16 +11,24 @@
 					$("#config2").removeClass("hidden");
 				break;
 				case 2:
-					$("#congif2").addClass('hidden');
-					$("#config3").removeClass('hidden');
+					var erroSeco = checkSeco();
+					if(erroSeco==0){
+						$("#config2").addClass('hidden');
+						$("#config3").removeClass('hidden');
+					}
 				break;
 				case 3:
-					$("#congif3").addClass('hidden');
-					$("#home").removeClass('hidden');
+					var erroOrg = checkOrg($('#checkOrg1').val(),$('#checkOrg2').val());
+					if(erroOrg==0){
+						$("#config3").addClass('hidden');
+						$("#home").removeClass('hidden');
+					}
 				break;
 			};
 		};
-		function checkSeco(diaSeco1,diaSeco2) {
+		function checkSeco() {
+			var diaSeco1 = $('#checkSeco1').val();
+			var diaSeco2 = $('#checkSeco2').val();
 			var erro=0;
 			var nchecks=0;
 			var dia_seco1;
@@ -34,27 +42,29 @@
 				dia_seco2=true;
 				nchecks++;
 			}
-			if (nchecks==0) {
-				$("#diaSecoErro").removeClass('hidden');
-				erro++;
-			}else if (nchecks==1) {
-				if (dia_seco1) {
-					//Session.set("diaSecoAlertado", diaSeco1);
-					nchecks==0;
-				}else if (dia_seco2) {
-					//Session.set("diaSecoAlertado", diaSeco2);
-					nchecks=0;
-				}
-			}else if (nchecks==2) {
-				//Session.set("diaSecoAlertado", array(diaSeco1, diaSeco2));
-				nchecks=0;
+			switch(nchecks){
+				case 0:
+					$("#diaSecoErro").removeClass('hidden');
+					erro++;
+				break;
+				case 1:
+					if (dia_seco1) {
+						$("#dia_seco1").val(diaSeco1);
+					}
+					if (dia_org2) {
+						$("#dia_seco2").val(diaSeco2);
+					}
+				break;
+				case 2:
+					$("#dia_seco1").val(diaSeco1);
+					$("#dia_seco2").val(diaSeco2);
+				break;
 			}
-
-			if (erro==0) {
-				next(2);
-			}
+			return erro;
 		};
-		function checkOrg(diaOrg1, diaOrg2) {
+		function checkOrg() {
+			var diaOrg1 = $('#checkOrg1').val();
+			var diaOrg2 = $('#checkOrg2').val();
 			var erro=0;
 			var nchecks=0;
 			var dia_org1;
@@ -69,25 +79,25 @@
 				nchecks++;
 			}
 
-			if (nchecks==0) {
-				$("#diaOrgErro").removeClass('hidden');
-				erro++;
-			}else if (nchecks==1) {
-				if (dia_org1) {
-					//Session.set("diaOrgAlertado", diaOrg1);
-					nchecks==0;
-				}else if (dia_org2) {
-					//Session.set("diaOrgAlertado", diaOrg2);
-					nchecks=0;
-				}
-			}else if (nchecks==2) {
-				//Session.set("diaOrgAlertado", array(diaOrg1, diaOrg2));
-				nchecks=0;
+			switch(nchecks){
+				case 0:
+					$("#diaOrgErro").removeClass('hidden');
+					erro++;
+				break;
+				case 1:
+					if (dia_org1) {
+						$("#dia_org1").val(diaOrg1);
+					}
+					if (dia_org2) {
+						$("#dia_org2").val(diaOrg2);
+					}
+				break;
+				case 2:
+					$("#dia_org1").val(diaOrg1);
+					$("#dia_org2").val(diaOrg2);
+				break;
 			}
-
-			if (erro==0) {
-				next(3);
-			}
+			return erro;
 		};
 	</script>
 </template>
