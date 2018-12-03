@@ -1,6 +1,6 @@
 <template name="funcs">
 	<script type="text/javascript">
-		function proximo(pn) {
+		function proximo(pn){
 			switch(pn){
 				case 0: 
 					$("#welcome").addClass("hidden");
@@ -15,17 +15,234 @@
 					if(erroSeco==0){
 						$("#config2").addClass('hidden');
 						$("#config3").removeClass('hidden');
+
+						// checkbox 1
+
+						if($("#checkSeco1").val()==1 && document.getElementById("checkSeco1").checked){
+							if ($("#domingoSeco1h").hasClass('hidden')) {
+								$("#domingoSeco1h").removeClass('hidden');					
+							}else{
+								$("#domingoSeco1h").addClass('hidden');
+							}
+						}
+						if($("#checkSeco1").val()==2 && document.getElementById("checkSeco1").checked){
+							if ($("#segundaSeco1h").hasClass('hidden')) {
+								$("#segundaSeco1h").removeClass('hidden');					
+							}else{
+								$("#segundaSeco1h").addClass('hidden');
+							}
+						}
+						if($("#checkSeco1").val()==3 && document.getElementById("checkSeco1").checked){
+							if ($("#tercaSeco1h").hasClass('hidden')) {
+								$("#tercaSeco1h").removeClass('hidden');					
+							}else{
+								$("#tercaSeco1h").addClass('hidden');
+							}	
+						}
+						if ($("#checkSeco1").val()==4 && document.getElementById("checkSeco1").checked) {
+							if ($("#quartaSeco1h").hasClass('hidden')) {
+								$("#quartaSeco1h").removeClass('hidden');					
+							}else{
+								$("#quartaSeco1h").addClass('hidden');
+							}
+						}
+						if($("#checkSeco1").val()==5 && document.getElementById("checkSeco1").checked){
+							if ($("#quintaSeco1h").hasClass('hidden')) {
+								$("#quintaSeco1h").removeClass('hidden');					
+							}else{
+								$("#quintaSeco1h").addClass('hidden');
+							}
+						}
+						if($("#checkSeco1").val()==6 && document.getElementById("checkSeco1").checked){
+							if ($("#sextaSeco1h").hasClass('hidden')) {
+								$("#sextaSeco1h").removeClass('hidden');					
+							}else{
+								$("#sextaSeco1h").addClass('hidden');
+							}
+						}
+						if ($("#checkSeco1").val()==7 && document.getElementById("checkSeco1").checked) {
+							if ($("#sabadoSeco1h").hasClass('hidden')) {
+								$("#sabadoSeco1h").removeClass('hidden');					
+							}else{
+								$("#sabadoSeco1h").addClass('hidden');
+							}
+						}
+
+						// checkbox 2
+
+						if ($("#checkSeco2").val()==1 && document.getElementById("checkSeco2").checked){
+							if ($("#domingoSeco2h").hasClass('hidden')) {
+								$("#domingoSeco2h").removeClass('hidden');					
+							}else{
+								$("#domingoSeco2h").addClass('hidden');
+							}
+						}
+						if ($("#checkSeco2").val()==2 && document.getElementById("checkSeco2").checked){
+							if ($("#segundaSeco2h").hasClass('hidden')) {
+								$("#segundaSeco2h").removeClass('hidden');					
+							}else{
+								$("#segundaSeco2h").addClass('hidden');
+							}
+						}
+						if ($("#checkSeco2").val()==3 && document.getElementById("checkSeco2").checked){
+							if ($("#tercaSeco2h").hasClass('hidden')) {
+								$("#tercaSeco2h").removeClass('hidden');					
+							}else{
+								$("#tercaSeco2h").addClass('hidden');
+							}
+						}
+						if ($("#checkSeco2").val()==4 && document.getElementById("checkSeco2").checked){
+							if ($("#quartaSeco2h").hasClass('hidden')) {
+								$("#quartaSeco2h").removeClass('hidden');					
+							}else{
+								$("#quartaSeco2h").addClass('hidden');
+							}
+						}
+						if ($("#checkSeco2").val()==5 && document.getElementById("checkSeco2").checked){
+							if ($("#quintaSeco2h").hasClass('hidden')) {
+								$("#quintaSeco2h").removeClass('hidden');					
+							}else{
+								$("#quintaSeco2h").addClass('hidden');
+							}
+						}
+						if ($("#checkSeco2").val()==6 && document.getElementById("checkSeco2").checked){
+							if ($("#sextaSeco2h").hasClass('hidden')) {
+								$("#sextaSeco2h").removeClass('hidden');					
+							}else{
+								$("#sextaSeco2h").addClass('hidden');
+							}
+						}
+						if ($("#checkSeco2").val()==7 && document.getElementById("checkSeco2").checked){
+							if ($("#sabadoSeco2h").hasClass('hidden')) {
+								$("#sabadoSeco2h").removeClass('hidden');					
+							}else{
+								$("#sabadoSeco2h").addClass('hidden');
+							}
+						}
 					}
 				break;
 				case 3:
-					var erroOrg = checkOrg($('#checkOrg1').val(),$('#checkOrg2').val());
+					var erroOrg = checkOrg();
 					if(erroOrg==0){
 						$("#config3").addClass('hidden');
 						$("#home").removeClass('hidden');
+						if($("#ifAvisos").hasClass('true')){
+							$("#myModal").removeClass('hidden');
+						}
+
+						// checkbox 3
+
+						if ($("#checkOrg1").val()==1 && document.getElementById("checkOrg1").checked){
+							if ($("#domingoOrg1h").hasClass('hidden')) {
+								$("#domingoOrg1h").removeClass('hidden');					
+							}else{
+								$("#domingoOrg1h").addClass('hidden');
+							}
+						}
+						if ($("#checkOrg1").val()==2 && document.getElementById("checkOrg1").checked){
+							if ($("#segundaOrg1h").hasClass('hidden')) {
+								$("#segundaOrg1h").removeClass('hidden');					
+							}else{
+								$("#segundaOrg1h").addClass('hidden');
+							}
+						}
+						if ($("#checkOrg1").val()==3 && document.getElementById("checkOrg1").checked){
+							if ($("#tercaOrg1h").hasClass('hidden')) {
+								$("#tercaOrg1h").removeClass('hidden');					
+							}else{
+								$("#tercaOrg1h").addClass('hidden');
+							}
+						}
+						if ($("#checkOrg1").val()==4 && document.getElementById("checkOrg1").checked){
+							if ($("#quartaOrg1h").hasClass('hidden')) {
+								$("#quartaOrg1h").removeClass('hidden');					
+							}else{
+								$("#quartaOrg1h").addClass('hidden');
+							}
+						}
+						if ($("#checkOrg1").val()==5 && document.getElementById("checkOrg1").checked){
+							if ($("#quintaOrg1h").hasClass('hidden')) {
+								$("#quintaOrg1h").removeClass('hidden');					
+							}else{
+								$("#quintaOrg1h").addClass('hidden');
+							}
+						}
+						if ($("#checkOrg1").val()==6 && document.getElementById("checkOrg1").checked){
+							if ($("#sextaOrg1h").hasClass('hidden')) {
+								$("#sextaOrg1h").removeClass('hidden');					
+							}else{
+								$("#sextaOrg1h").addClass('hidden');
+							}
+						}
+						if ($("#checkOrg1").val()==7 && document.getElementById("checkOrg1").checked){
+							if ($("#sabadoOrg1h").hasClass('hidden')) {
+								$("#sabadoOrg1h").removeClass('hidden');					
+							}else{
+								$("#sabadoOrg1h").addClass('hidden');
+							}
+						}
+
+						// checkbox 4
+
+						if ($("#checkOrg2").val()==1 && document.getElementById("checkOrg2").checked){
+							if ($("#domingoOrg2h").hasClass('hidden')) {
+								$("#domingoOrg2h").removeClass('hidden');					
+							}else{
+								$("#domingoOrg2h").addClass('hidden');
+							}
+						}
+						if ($("#checkOrg2").val()==2 && document.getElementById("checkOrg2").checked){
+							if ($("#segundaOrg2h").hasClass('hidden')) {
+								$("#segundaOrg2h").removeClass('hidden');					
+							}else{
+								$("#segundaOrg2h").addClass('hidden');
+							}
+						}
+						if ($("#checkOrg2").val()==3 && document.getElementById("checkOrg2").checked){
+							if ($("#tercaOrg2h").hasClass('hidden')) {
+								$("#tercaOrg2h").removeClass('hidden');					
+							}else{
+								$("#tercaOrg2h").addClass('hidden');
+							}
+						}
+						if ($("#checkOrg2").val()==4 && document.getElementById("checkOrg2").checked){
+							if ($("#quartaOrg2h").hasClass('hidden')) {
+								$("#quartaOrg2h").removeClass('hidden');					
+							}else{
+								$("#quartaOrg2h").addClass('hidden');
+							}
+						}
+						if ($("#checkOrg2").val()==5 && document.getElementById("checkOrg2").checked){
+							if ($("#quintaOrg2h").hasClass('hidden')) {
+								$("#quintaOrg2h").removeClass('hidden');					
+							}else{
+								$("#quintaOrg2h").addClass('hidden');
+							}
+
+						}
+						if ($("#checkOrg2").val()==6 && document.getElementById("checkOrg2").checked){
+							if ($("#sextaOrg2h").hasClass('hidden')) {
+								$("#sextaOrg2h").removeClass('hidden');					
+							}else{
+								$("#sextaOrg2h").addClass('hidden');
+							}
+						}
+						if ($("#checkOrg2").val()==7 && document.getElementById("checkOrg2").checked){
+							if ($("#sabadoOrg2h").hasClass('hidden')) {
+								$("#sabadoOrg2h").removeClass('hidden');					
+							}else{
+								$("#sabadoOrg2h").addClass('hidden');
+							}
+						}
 					}
 				break;
-			};
+				case 4:
+					$("#home").addClass('hidden');
+					$("#config").removeClass('hidden');
+				break;
+			}
 		};
+
 		function checkSeco() {
 			var diaSeco1 = $('#checkSeco1').val();
 			var diaSeco2 = $('#checkSeco2').val();

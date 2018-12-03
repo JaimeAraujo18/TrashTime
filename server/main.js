@@ -4,6 +4,7 @@ import '../imports/api/bairros.js';
 import '../imports/api/cidades.js';
 
 Meteor.startup(() => {
+	/*
 	Push.Configure({
 	  apn: {
 	    certData: Assets.getText('apnDevCert.pem'),
@@ -25,7 +26,8 @@ Meteor.startup(() => {
 	  // 'keepNotifications': false,
 	//
 	});
-	
+	*/
+
 	import { Avisos } from '../imports/api/avisos.js';
 	import { Bairros } from '../imports/api/bairros.js';
 	import { Cidades } from '../imports/api/cidades.js';

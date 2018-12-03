@@ -1,5 +1,58 @@
 <template name="home">
-	<div id="home" class="hidden">
-		<p> o template 'Home' está a mostra! </p>
+	<div id="home" class="hidden conteiner">
+		<div id="myModal" class="modalzinho hidden">
+	  		<div class="modal-conteudo">
+	  			<div class="modal-head">
+	  				<h5>Aviso:</h5><br>
+	    			<small id="tituloModal"></small>
+	    			<span class="close">&times;</span>
+	  			</div>
+	  			<div class="modal-body">
+	    			<small id="texto"></small>
+	  			</div>
+	  			<div class="modal-footer">
+	  				<small id="detalhes">Aviso desde:<br></small>
+	  			</div>
+	  		</div>
+		</div>
+		<h2 class="text-center c12">Home</h2><br>
+		<div class="c10 m1">
+			<p id="cidadeP">Cidade: </p>
+			<p id="bairroP" >Bairro: </p>
+			<p>Dias do Lembrete: </p>
+			<div class="conteiner c10 m1" id="dias">
+				<small id="domingoSeco1h" class="hidden">Domingo<br></small>
+				<small id="segundaSeco1h" class="hidden">Segunda-Feira<br></small>
+				<small id="tercaSeco1h" class="hidden">Terça-Feira<br></small>
+				<small id="quartaSeco1h" class="hidden">Quarta-Feira<br></small>
+				<small id="quintaSeco1h" class="hidden">Quinta-Feira<br></small>
+				<small id="sextaSeco1h" class="hidden">Sexta-Feira<br></small>
+				<small id="sabadoSeco1h" class="hidden">Sábado<br></small>
+				<small id="domingoSeco2h" class="hidden">Domingo<br></small>
+				<small id="segundaSeco2h" class="hidden">Segunda-Feira<br></small>
+				<small id="tercaSeco2h" class="hidden">Terça-Feira<br></small>
+				<small id="quartaSeco2h" class="hidden">Quarta-Feira<br></small>
+				<small id="quintaSeco2h" class="hidden">Quinta-Feira<br></small>
+				<small id="sextaSeco2h" class="hidden">Sexta-Feira<br></small>
+				<small id="sabadoSeco2h" class="hidden">Sábado<br></small>
+				<small id="domingoOrg1h" class="hidden">Domingo<br></small>
+				<small id="segundaOrg1h" class="hidden">Segunda-Feira<br></small>
+				<small id="tercaOrg1h" class="hidden">Terça-Feira<br></small>
+				<small id="quartaOrg1h" class="hidden">Quarta-Feira<br></small>
+				<small id="quintaOrg1h" class="hidden">Quinta-Feira<br></small>
+				<small id="sextaOrg1h" class="hidden">Sexta-Feira<br></small>
+				<small id="sabadoOrg1h" class="hidden">Sábado<br></small>
+			 	<small id="domingoOrg2h" class="hidden">Domingo<br></small>
+				<small id="segundaOrg2h" class="hidden">Segunda-Feira<br></small>
+				<small id="tercaOrg2h" class="hidden">Terça-Feira<br></small>
+				<small id="quartaOrg2h" class="hidden">Quarta-Feira<br></small>
+				<small id="quintaOrg2h" class="hidden">Quinta-Feira<br></small>
+				<small id="sextaOrg2h" class="hidden">Sexta-Feira<br></small>
+				<small id="sabadoOrg2h" class="hidden">Sábado<br></small>
+			</div>
+			<button id="homeBtn" class="c12 botao" onclick="proximo(4)">
+				<span><strong class="verde">Editar</strong></span>
+			</button>
+		</div>
 	</div>
 </template>
